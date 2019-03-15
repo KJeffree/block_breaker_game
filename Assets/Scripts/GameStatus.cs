@@ -13,9 +13,23 @@ public class GameStatus : MonoBehaviour
     //state variables
     [SerializeField] int currentScore = 0;
 
+
+    private void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else 
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     void Start()
     {
-        updateScoreText();
+        UpdateScoreText();
     }
 
 
@@ -23,17 +37,22 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         Time.timeScale = gameSpeed;
-        updateScoreText();
+        UpdateScoreText();
     }
 
-    public void addToScore()
+    public void AddToScore()
     {
         currentScore += pointsPerBlockDestroyed;
     }
 
-    public void updateScoreText()
+    public void UpdateScoreText()
     {
         scoreText.text = currentScore.ToString();
 
+    }
+    
+    public void ResetGame()
+    {
+        Destroy(gameObject);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
+
 {
     public void LoadNextScene()
     {
@@ -14,6 +15,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadStartScreen()
     {
         SceneManager.LoadScene(0);
+        FindObjectOfType<GameStatus>().ResetGame();
     }
 
     public void QuitGame()
