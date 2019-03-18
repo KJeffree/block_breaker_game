@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7617750980071265511, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
         type: 3}
       propertyPath: m_Name
-      value: Unbreakable Block
+      value: 3-HitBlock
       objectReference: {fileID: 0}
     - target: {fileID: 7617750980071265511, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
         type: 3}
@@ -86,6 +86,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.g
       value: 0.67560244
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
+        type: 3}
+      propertyPath: hitSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
+        type: 3}
+      propertyPath: hitSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa8fc408568f94ea1aec468c68f12406,
+        type: 3}
+    - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
+        type: 3}
+      propertyPath: hitSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4f5b5d5ba20a4c0cb91f4ac26fb425b,
+        type: 3}
+    - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
+        type: 3}
+      propertyPath: maxHits
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 961ce5d98a4bd4aa28ba0d063e95f40e, type: 3}
