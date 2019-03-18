@@ -96,13 +96,13 @@ PrefabInstance:
         type: 3}
       propertyPath: hitSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: aa8fc408568f94ea1aec468c68f12406,
+      objectReference: {fileID: 21300000, guid: abde86cda13de493aa13ad88a4ae3cc4,
         type: 3}
     - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
         type: 3}
       propertyPath: hitSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: b4f5b5d5ba20a4c0cb91f4ac26fb425b,
+      objectReference: {fileID: 21300000, guid: 232dc338040424e87a38160b0484defb,
         type: 3}
     - target: {fileID: 7617750980071265507, guid: 961ce5d98a4bd4aa28ba0d063e95f40e,
         type: 3}
