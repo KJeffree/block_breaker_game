@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7617750980071265506}
   - component: {fileID: 7617750980071265507}
   m_Layer: 0
-  m_Name: BlockOrange
-  m_TagString: Untagged
+  m_Name: Unbreakable Block
+  m_TagString: Unbreakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aac119d8f5e0848fea5ab14b6aa54f66, type: 3}
-  m_Color: {r: 1, g: 0.119365565, b: 0, a: 1}
+  m_Color: {r: 0.31132078, g: 0.24523854, b: 0.23642758, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: d4457d0c73faa45d78a0368cee973718, type: 3}
+  blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
