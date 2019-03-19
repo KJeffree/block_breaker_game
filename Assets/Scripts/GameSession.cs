@@ -9,15 +9,17 @@ public class GameSession : MonoBehaviour
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] int pointsPerBlockDestroyed = 83;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI livesText;
 
     //state variables
     [SerializeField] int currentScore = 0;
+    [SerializeField] int currentLives = 3;
 
 
     private void Awake()
     {
-        int gameStatusCount = FindObjectsOfType<GameSession>().Length;
-        if (gameStatusCount > 1)
+        int gameSessionCount = FindObjectsOfType<GameSession>().Length;
+        if (gameSessionCount > 1)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
@@ -30,6 +32,7 @@ public class GameSession : MonoBehaviour
     void Start()
     {
         UpdateScoreText();
+        UpdateLivesText();
     }
 
 
@@ -38,6 +41,8 @@ public class GameSession : MonoBehaviour
     {
         Time.timeScale = gameSpeed;
         UpdateScoreText();
+        UpdateLivesText();
+
     }
 
     public void AddToScore()
@@ -50,9 +55,30 @@ public class GameSession : MonoBehaviour
         scoreText.text = currentScore.ToString();
 
     }
+
+    public void UpdateLivesText()
+    {
+        livesText.text = currentLives.ToString();
+
+    }
     
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public int GetLives()
+    {
+        return currentLives;
+    }
+
+    public void LoseLife()
+    {
+        currentLives--;
+    }
+
+    public void GainLife()
+    {
+        currentLives++;
     }
 }

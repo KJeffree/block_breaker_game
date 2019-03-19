@@ -5,8 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class LoseCollider : MonoBehaviour
 {
+
+    GameSession gameSession;
+    Ball ball;
+    private void Start()
+    {
+        gameSession = FindObjectOfType<GameSession>();
+        ball = FindObjectOfType<Ball>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Game Over");
+        gameSession.LoseLife();
+
+        if (gameSession.GetLives() == 0)
+        {
+            SceneManager.LoadScene("Game Over");
+        }
+        else
+        {
+            ball.PlaceBallAbovePaddle();
+            ball.LockBallToPaddle();
+        }
     }
 }

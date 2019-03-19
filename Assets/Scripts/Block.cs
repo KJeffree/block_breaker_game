@@ -12,7 +12,7 @@ public class Block : MonoBehaviour
 
     //cahced reference
     Level level;
-    GameSession gameStatus;
+    GameSession gameSession;
 
     //state variables
     [SerializeField] int timesHit; //only serizlised for debug purposes
@@ -21,7 +21,7 @@ public class Block : MonoBehaviour
     private void Start()
     {
         CountBreakableBlocks();
-        gameStatus = FindObjectOfType<GameSession>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     private void CountBreakableBlocks()
@@ -78,7 +78,7 @@ public class Block : MonoBehaviour
 
    private void PlayBlockDestroySFX()
    {
-       gameStatus.AddToScore();
+       gameSession.AddToScore();
        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
    }
 
