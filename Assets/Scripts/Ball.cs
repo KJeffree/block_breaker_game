@@ -62,8 +62,19 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        float x = Random.Range(0f, randomFactor);
-        float y = Random.Range(0f, randomFactor);
+        float x;
+        float y;
+        if (myRigidBody2D.velocity.x >= 0){
+            x = Random.Range(0f, randomFactor);
+        } else {
+            x = -(Random.Range(0f, randomFactor));
+        }
+
+        if (myRigidBody2D.velocity.y >= 0){
+            y = Random.Range(0f, randomFactor);
+        } else {
+            y = -(Random.Range(0f, randomFactor));
+        }
         Vector2 velocityTweak = new Vector2(x,y);
         if (hasStarted)
         {
