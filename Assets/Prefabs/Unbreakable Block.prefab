@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7617750980071265511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.03, y: 5.6, z: 0}
+  m_LocalPosition: {x: 5, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,3 +121,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: d4457d0c73faa45d78a0368cee973718, type: 3}
   blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  hitSprites: []
+  timesHit: 0
