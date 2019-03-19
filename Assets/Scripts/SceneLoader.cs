@@ -15,9 +15,12 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadNextScene()
     {
-        gameSession.GainLife();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+        if (currentSceneIndex > 0)
+        {
+            gameSession.GainLife();
+        }
     }
 
     public void LoadStartScreen()

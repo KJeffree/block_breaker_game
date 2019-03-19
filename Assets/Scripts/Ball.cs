@@ -67,9 +67,18 @@ public class Ball : MonoBehaviour
         Vector2 velocityTweak = new Vector2(x,y);
         if (hasStarted)
         {
-            AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
-            myAudioSource.PlayOneShot(clip);
+            myAudioSource.PlayOneShot(ballSounds[0]);
             myRigidBody2D.velocity += velocityTweak;
         }
+    }
+
+    public void CollideLoseCollider()
+    {
+        myAudioSource.PlayOneShot(ballSounds[1]);
+    }
+
+    public bool GetHasStarted()
+    {
+        return hasStarted;
     }
 }
