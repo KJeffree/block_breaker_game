@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int pointsPerBlockDestroyed = 83;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI livesText;
+    [SerializeField] bool isAutoPlayEnabled;
 
     //state variables
     [SerializeField] int currentScore = 0;
@@ -80,5 +81,10 @@ public class GameSession : MonoBehaviour
     public void GainLife()
     {
         currentLives++;
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }
