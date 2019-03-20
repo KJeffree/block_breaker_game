@@ -346,6 +346,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 207831681}
+    - target: {fileID: 2831702267836701687, guid: bcd4330fcbd8b45c2a3231bb3b75f9f9,
+        type: 3}
+      propertyPath: isAutoPlayEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2102648771897216753, guid: bcd4330fcbd8b45c2a3231bb3b75f9f9,
         type: 3}
       propertyPath: m_havePropertiesChanged
